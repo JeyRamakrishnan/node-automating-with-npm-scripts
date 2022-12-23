@@ -15,7 +15,10 @@
     "test": "mocha",
     "test:module2": "mocha test/module2.test.js",
     "test:module3": "mocha test/module3.test.js",
-    "test:module4": "mocha test/module4.test.js"
+    "test:module4": "mocha test/module4.test.js",
+    "start": "npm run build && node index.js",
+    "start-dev": "nodemon --watch src --exec PORT 5000 npm start",
+    "prestart-dev": "npm run lint-fix"
   },
   "repository": {
     "type": "git",
